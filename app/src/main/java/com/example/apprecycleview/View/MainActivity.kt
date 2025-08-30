@@ -30,14 +30,20 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         }
         val edtNomeUsuario = findViewById<EditText>(R.id.edt_nome_usuario)
+        val edtEmailUsuario = findViewById<EditText>(R.id.edt_email_usuario)
+        val edtTelefoneUsuario = findViewById<EditText>(R.id.edt_telefone_usuario)
         val btnCadastrar= findViewById<Button>(R.id.btn_cadastro)
         val fabAvanca = findViewById<FloatingActionButton>(R.id.fab_avanco)
 
         btnCadastrar.setOnClickListener{
             val nome = edtNomeUsuario.text.toString()
-            val usuario = Usuario(nome)
+            val email = edtEmailUsuario.text.toString()
+            val telefone = edtTelefoneUsuario.text.toString()
+            val usuario = Usuario(nome, telefone, email)
             dao.adicionarUsuario(usuario)
             edtNomeUsuario.text.clear()
+            edtEmailUsuario.text.clear()
+            edtTelefoneUsuario.text.clear()
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Sucesso")
             builder.setMessage("Cadastro Ok!")
