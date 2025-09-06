@@ -20,6 +20,3 @@ Este projeto é um aplicativo Android básico desenvolvido em Kotlin. Foi criado
 * **Componentes:** RecyclerView, FloatingActionButton
 * **Build:** Gradle
 
-## Estrutura do Projeto
-
-O projeto está estruturado da seguinte forma:
